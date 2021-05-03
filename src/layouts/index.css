@@ -1,0 +1,146 @@
+.gradient {
+  background: rgb(136, 96, 116);
+  background: linear-gradient(
+    to bottom,
+    rgb(211, 18, 115) 0%,
+    rgb(167, 55, 111) 100%
+  );
+}
+
+.navbar {
+  box-shadow: 0px 0px 5px #333;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  margin: inherit;
+  padding: inherit;
+  font-weight: bold;
+}
+
+.navbar h2 {
+  font-size: 14px;
+  margin: inherit;
+  padding: inherit;
+  color: white;
+}
+
+.jumbotron.gradient {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-brand.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-brand.navbar-brand:hover {
+  color: #777;
+}
+
+.navbar-brand.navbar-brand:focus {
+  color: white;
+}
+
+.lesson {
+  margin: 15px;
+  padding: 15px;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.lesson h1 {
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px dashed #ccc;
+}
+
+.lesson p {
+  clear: both;
+}
+
+.lesson-links {
+  font-size: 18px;
+  padding: 15px 0;
+}
+
+.next {
+  float: right;
+}
+
+.prev {
+  float: left;
+}
+
+.lesson-title {
+  color: white;
+  font-weight: bold;
+}
+
+.klipse-result {
+  border: 1px solid #90b4fe;
+  padding-top: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.klipse-result .CodeMirror-wrap {
+  width: 100%;
+  border-color: transparent;
+}
+
+.klipse-result::before {
+  content: "result";
+  background-color: white;
+  position: absolute;
+  top: -13px;
+  height: 13px;
+}
+
+.language-htm,
+.language-css,
+.language-js,
+.language-json {
+  width: 100%;
+}
+
+.gatsby-highlight {
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.CodeMirror-wrap {
+  width: 100%;
+  font-size: 12px;
+  height: inherit;
+  margin-bottom: 12px;
+}
+
+.CodeMirror-gutters {
+  height: inherit !important;
+}
+
+.klipse-snippet > .CodeMirror {
+  border: none;
+  width: 100%;
+}
+
+.gatsby-highlight > .klipse-snippet {
+  border: 1px solid #90b4fe;
+  width: 100%;
+  border-right: none;
+  position: relative;
+  margin-bottom: 15px;
+}
