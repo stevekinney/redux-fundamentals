@@ -1,5 +1,5 @@
 ---
-path: "/connect"
+path: "/map-state-to-props"
 title: "mapStateToProps"
 order: "4B"
 section: "Connecting Redux to React"

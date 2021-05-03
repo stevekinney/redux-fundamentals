@@ -1,9 +1,9 @@
 .gradient {
-  background: rgb(136, 96, 116);
+  background: rgb(28, 102, 180);
   background: linear-gradient(
     to bottom,
-    rgb(211, 18, 115) 0%,
-    rgb(167, 55, 111) 100%
+    rgb(28, 102, 180) 0%,
+    rgb(15, 58, 104) 100%
   );
 }
 
@@ -43,7 +43,8 @@
 }
 
 .navbar-brand.navbar-brand:hover {
-  color: #777;
+  color: white;
+  text-decoration: underline;
 }
 
 .navbar-brand.navbar-brand:focus {
@@ -87,7 +88,7 @@
 }
 
 .klipse-result {
-  border: 1px solid #90b4fe;
+  border: 1px solid rgb(34, 128, 228);
   padding-top: 8px;
   position: relative;
   width: 100%;
@@ -138,7 +139,7 @@
 }
 
 .gatsby-highlight > .klipse-snippet {
-  border: 1px solid #90b4fe;
+  border: 1px solid rgb(34, 128, 228);
   width: 100%;
   border-right: none;
   position: relative;
