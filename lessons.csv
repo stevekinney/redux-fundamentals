@@ -34,3 +34,4 @@ path,title,order,section,description
 "/slice-actions","Slice Actions","7E","Redux Toolkit","Getting started and an introduction to TypeScript && React Workshop"
 "/create-action","Creating Actions","7F","Redux Toolkit","Getting started and an introduction to TypeScript && React Workshop"
 "/extra-reducers","Extra Reducers","7G","Redux Toolkit","Getting started and an introduction to TypeScript && React Workshop"
+"/create-async-thunk","Creating Async Thunks in Redux Toolkit","8A","Redux Toolkit","Getting started and an introduction to TypeScript && React Workshop"

@@ -34,3 +34,4 @@ order,title,link0,link1,link2,link3,link4,link5,link6,link7,link8,link9,link10,l
 7E,Slice Actions,,,,,,,,,,,,,,,,,,
 7F,Creating Actions,,,,,,,,,,,,,,,,,,
 7G,Extra Reducers,,,,,,,,,,,,,,,,,,
+8A,Creating Async Thunks in Redux Toolkit,https://github.com/stevekinney/starwars-redux/commit/92e906c8fa1895381a0150c028eca3cac0a144c7,,,,,,,,,,,,,,,,,
