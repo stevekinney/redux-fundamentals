@@ -2,7 +2,7 @@
 path: "/reselect"
 title: "Computing Data with Reselect"
 order: "5A"
-section: "Selectors, Reselect, and a Component's Own Properties"
+section: "Selectors and Reselect"
 description: "Getting started and an introduction to TypeScript && React Workshop"
 ---
 
