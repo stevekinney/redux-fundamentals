@@ -31,6 +31,4 @@ export const Counter = () => {
 
 Can you wire it up to make it dispatch the correct actions?
 
-Some tasting notes:
-
-- You might want to use some regular ol' React component state to hold onto the temporary value that we want to set the count to before we hit the submit button.
+**Tasting note**: You might want to use some regular ol' React component state to hold onto the temporary value that we want to set the count to before we hit the submit button.

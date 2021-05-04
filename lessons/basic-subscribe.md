@@ -1,5 +1,5 @@
 ---
-path: "/create-store"
+path: "/subscribing-to-the-store"
 title: "Subscring to Store Changes"
 order: "2D"
 section: "Redux Without React"
@@ -24,3 +24,5 @@ unsubscribe();
 
 store.dispatch(add(1000)); // (Silence)
 ```
+
+Now, it's silent, but the action was still dispatched and the reducer still updated the state. We just turned off our notifcations.

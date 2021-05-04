@@ -1,7 +1,7 @@
 ---
 path: "/deriving-data"
 title: "Deriving Data"
-order: "4F"
+order: "4G"
 section: "Connecting Redux to React"
 description: "Getting started and an introduction to TypeScript && React Workshop"
 ---
@@ -12,7 +12,7 @@ We should _not_ store those in state. Keeping everything in sync could be compli
 
 ```js
 import { connect } from "react-redux";
-import { Summary } from "./Summary";
+import { Summary } from "../components/Summary";
 
 const mapStateToProps = (state) => {
   const subtotal = state.items.reduce(
@@ -31,5 +31,5 @@ const mapStateToProps = (state) => {
   };
 };
 
-export const ConnectedSummary = connect(mapStateToProps)(Summary);
+export const SummaryContainer = connect(mapStateToProps)(Summary);
 ```

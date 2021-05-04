@@ -1,67 +1,14 @@
 ---
-path: "/reselect-with-props"
+path: "/reselect-exercise"
 title: "Using Props with Reselect"
 order: "5B"
-section: "Reselect and Selectors"
+section: "Selectors and Reselect"
 description: "Getting started and an introduction to TypeScript && React Workshop"
 ---
 
-**Locally**: Clone and install [this repository](https://github.com/stevekinney/jetsetter-redux). We'll be starting from the `basic-functionality` branch.
+So, we got it working with the total summary, but it also needs to work for each menu item. You'll need to do the following:
 
-This works pretty well using hooks, but how do we get access to props when we're using `connect`?
+- Create the appropriate selectors.
+- Either use `mapStateToProps` or use hooks to get the total into the component.
 
-Let's start with
-
-```js
-import { connect } from "react-redux";
-import { Item } from "./Item";
-
-const mapStateToProps = (state, ownProps) => {
-  return {
-    ...ownProps,
-    items: state.items.filter((item) => item.packed === ownProps.packed),
-  };
-};
-
-const Component = ({ items = [], title = "Items", packed = true }) => {
-  return (
-    <section className="Items">
-      <h2>
-        {title} ({items.length})
-      </h2>
-      {items.map((item) => (
-        <Item key={item.id} item={item} />
-      ))}
-    </section>
-  );
-};
-
-export const Items = connect(mapStateToProps)(Component);
-```
-
-Okay, so let's write our selectors.
-
-```js
-const selectItems = (state) => state.items;
-const selectPackedProp = (_, props) => props.packed;
-
-const selectFilteredItems = createSelector(
-  [selectItems, selectPackedProp],
-  (items, packed) => items.filter((item) => item.packed === packed)
-);
-
-const mapStateToProps = (state, ownProps) => {
-  return {
-    ...ownProps,
-    items: selectFilteredItems(state, ownProps),
-  };
-};
-```
-
-## Using Reselect with Hooks
-
-```js
-const filteredItems = useSelector((state) =>
-  selectFilteredItems(state, { packed })
-);
-```
+You can take a peek at the solution [here](https://github.com/stevekinney/tip-calculator/commit/e1ea49ebb81a277e78b5970cd647ffdf9420fe46).

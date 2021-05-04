@@ -48,3 +48,5 @@ actions.increment();
 
 console.log(store.getState());
 ```
+
+There is no rule saying that you have to use `bindActionCreators`. It's there to help you.

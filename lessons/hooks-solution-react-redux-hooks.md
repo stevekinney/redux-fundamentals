@@ -30,7 +30,7 @@ export const SetCounter = () => {
           id="set-to"
           type="number"
           value={count}
-          onChange={(event) => setCount(parseInt(event.target.value, 10))}
+          onChange={(event) => setCount(event.target.value)}
         />
         <input type="submit" />
       </form>

@@ -17,39 +17,42 @@ In order to update the state—and subsequently the UI, we're going to need to d
 We'll use the aciton creator pattern to format our action for us in `action.js`.
 
 ```js
-export const ADD_NEW_ITEM = "ADD_NEW_ITEM";
+export const ITEM_ADDED = "ITEM_ADDED";
 
 export const addNewItem = (name, price) => {
   return {
-    type: ADD_NEW_ITEM,
+    type: ITEM_ADDED,
     payload: {
-      uuid: Date.now(),
       name,
       price,
-      quantity: 1,
     },
   };
 };
 ```
 
+You'll notice what I don't have in here: anything the that we didn't didn't get from the action itself. So, like, we don't know the `uuid` yet. The quantity will be 1 by default. The only things that the user gave us in that form was the `name` and the `price` and our action reflects that.
+
 Next, we'll update the reducer.
 
 ```js
-export const reducer = (state = initialState, action) => {
-  if (action.type === ADD_NEW_ITEM) {
-    return [...state, action.payload];
+export const reducer = (state = initialItems, action) => {
+  if (action.type === ITEM_ADDED) {
+    const item = { uuid: id++, quantity: 1, ...action.payload };
+    return [...state, item];
   }
 
   return state;
 };
 ```
 
+Now, one thing you'll notice is that I will let the action payload override the default properties. Maybe in the future, we add a quantity field. This will take the quantity from the action and use that if one exists.
+
 Let's try out firing an action from the developer tools.
 
 ```js
 {
-  type: 'ADD_NEW_ITEM',
-  payload: { uuid: 3, name: 'Braised Seitan', price: 12, quantity: 1 }
+  type: 'ITEM_ADDED',
+  payload: { name: 'Braised Seitan', price: 12 }
 }
 ```
 
@@ -59,11 +62,11 @@ We can't just require the action creator in the component because it's just a fu
 
 What we want to do is pass in an `onSubmit` prop, which the component is already expecting that is bound to Redux's `dispatch`.
 
-Let's start with the simplest possible version:
+Let's start with the simplest possible version in `containers/NewItemFormContainer.js`:
 
 ```js
 import { connect } from "react-redux";
-import { NewItemForm } from "./NewItemForm";
+import { NewItemForm } from "../components/NewItemForm";
 
 export const ConnectedNewItemForm = connect()(NewItemForm);
 ```
@@ -91,7 +94,7 @@ export const NewItemForm = ({ onSubmit, dispatch }) => {
 };
 ```
 
-(We'll also want to swap out `NewItemForm` for `ConnectedNewItemForm` in `Calculator.js`.)
+(We'll also want to swap out `NewItemForm` for `NewItemFormContainer` in `Calculator.js`.)
 
 This approach is a bit flawed. It ties our presentational component to Redux, which is less than optimal. It doesn't create a clear API contract. `NewItemForm` can literally dispatch anything it wants. We can do better.
 
@@ -99,8 +102,8 @@ Just like we can format our state to the props of a presentation component. We c
 
 ```js
 import { connect } from "react-redux";
-import { NewItemForm } from "./NewItemForm";
-import { addNewItem } from "./reducer";
+import { NewItemForm } from "../components/NewItemForm";
+import { addNewItem } from "../store/items/reducer";
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -108,7 +111,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export const ConnectedNewItemForm = connect(
+export const NewItemFormContainer = connect(
   null,
   mapDispatchToProps
 )(NewItemForm);

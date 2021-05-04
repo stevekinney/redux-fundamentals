@@ -36,9 +36,9 @@ To get things started, we're going to make a simple calculator. The state of the
 
 ```ts
 type ApplicationState = {};
-type Action: { type: string, [key: string]: any }
+type Action = { type: string; [key: string]: any };
 
-type Reducer = (state: ApplicationState, action: Action) => ApplicationState
+type Reducer = (state: ApplicationState, action: Action) => ApplicationState;
 ```
 
 So, let's start with a super simple example:
@@ -57,7 +57,16 @@ An action is just an object. The only requirement is that is has a `type` proper
 const incrementAction = { type: "INCREMENT" };
 ```
 
-It's convention to use SNAKE_CASE for our actions. I don't know why and frankly, I don't make the rules around here. You can ignore this if you want to at your own peril.
+## A Word on Conventions Around Action Types
+
+There are a few different patterns for naming your action types. For a long time, it was convention to use `SCREAMING_SNAKE_CASE`. As we'll see in a little bit, we frequently alias our action type names to constants in JavaScript, we we can't have spaces. Using `SCREAMING_SNAKE_CASE` also helps separates our constant action type names from other variables in our application.
+
+**Nota bene**: We'll see later on that Redux Toolkit uses a slightly different convetion. You'll see something more like this: `"tasks/addTask" or "counter/increment".
+
+- We're going to start by using the `SCREAMING_SNAKE_CASE` early in this course.
+- We'll eventually transition to the "counter/increment" style when we use Redux Toolkit. There are some abstractions that make this work that a little to much for us at this very moment.
+
+## Updating State Based on Actions
 
 Let's say an increment action comes in. Well, we should probably increment the value, right?
 
@@ -82,7 +91,7 @@ const initialState = { value: 0 };
 
 const INCREMENT = "INCREMENT";
 
-const incrementAction = { type: INCREMENT };
+const incrementCounter = { type: INCREMENT };
 
 const reducer = (state = initialState, action) => {
   if (action.type === INCREMENT) {
@@ -93,7 +102,7 @@ const reducer = (state = initialState, action) => {
 };
 ```
 
-You'll notice we made a constant called `INCREMENT`. The main that we took this approach is because we needed to make sure that we didn't accidentally mispell the action type—either when we created the action or in the reducer. At least now, our code will blow up. This sure beats silently failing.
+You'll notice we made a constant called `INCREMENT`. This is what I was talking about before. The main reason that we took this approach is because we needed to make sure that we didn't accidentally mispell the action type—either when we created the action or in the reducer. At least now, our code will blow up. This sure beats silently failing.
 
 We'll also typically use functions to create our actions since they might need more information.
 
@@ -103,9 +112,7 @@ const initialState = { value: 0 };
 const INCREMENT = "INCREMENT";
 const ADD = "ADD";
 
-const increment = () => {
-  type: INCREMENT;
-};
+const increment = () => ({ type: INCREMENT });
 const add = (number) => ({ type: ADD, payload: number });
 
 const reducer = (state = initialState, action) => {

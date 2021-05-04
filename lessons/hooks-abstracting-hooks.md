@@ -50,4 +50,6 @@ export const Counter = () => {
 export default Counter;
 ```
 
-**Exercise**: Can you implement this in `SetCounter`? (You can peek at the solution [here](https://github.com/stevekinney/redux-incident-counter/commit/e25cacd3ac7a1abfefb816484b93dafc8194e9f7?branch=e25cacd3ac7a1abfefb816484b93dafc8194e9f7&diff=split).)
+## Exercise
+
+Can you implement this in `SetCounter`? (You can peek at the solution [here](https://github.com/stevekinney/redux-incident-counter/commit/e25cacd3ac7a1abfefb816484b93dafc8194e9f7?branch=e25cacd3ac7a1abfefb816484b93dafc8194e9f7&diff=split).)

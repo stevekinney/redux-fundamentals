@@ -34,4 +34,4 @@ It's zero by default in our state, so our UI hasn't changed much. But, we _could
 }
 ```
 
-We can see the count increment, which is good. We can also see the actions logged into the tools. We can even roll back the state if want. (**Hint**: The Redux Dev Tools are using the enhancer to add this functionality to our store.)
+We can see the count increment, which is good. We can also see the actions logged into the tools. We can even roll back the state if want. (**Hint**: The Redux Developer Tools are using the enhancer to add this functionality to our store. We'll see how to do something similar later.)

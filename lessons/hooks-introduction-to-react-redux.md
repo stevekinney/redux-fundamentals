@@ -43,3 +43,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+With that—all of your components now have access to the Redux store—from a certain point of view.

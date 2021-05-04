@@ -1,20 +1,24 @@
 ---
-path: "/apply-middleware"
-title: "Apply Middleware"
+path: "/middleware-and-enhancers"
+title: "Middleware and Enhancers"
 order: "2G"
 section: "Redux Without React"
 description: "Creating Stores and Reducers"
 ---
 
-**Nota Bene**: I'm going to introduce this topic at a high-level right now, but we'll round back to it a few times throughout this course and cover it in greater depth in Production Grade Redux.
+The good news is that Redux is simple. The bad news is that it's simple. This means that there is a lot that it _doesn't_ do. That's okay, because we can extend what Redux can do with middleware and store enhancers.
+
+Middleware are a form of store enhancers, so, we'll start there.
+
+## The Actual API for `createStore()`
 
 `createStore()` takes one, two, or three arguments.
 
 - `reducer`
-- `initialState`
-- `enhancer`
+- `initialState` (Optional)
+- `enhancer` (Optional)
 
-As we saw, passing in a reducer is required, but everything else is optional. We're going to get way deeper into working with enhancers and middleware in the Production-Grade Redux course, but let's briefly dip our our toes in a bit right now because I both promised you that we'd cover the lion's share of the API surface area of Redux and because we'll see them pop up in this workshop as well.
+As we saw, passing in a reducer is _required_, but everything else is optional. Enhancers and middleware are definitely on the more advanced side, but let's briefly dip our our toes in a bit right now because I both promised you that we'd cover the lion's share of the API surface area of Redux and because we'll see them pop up in this workshop as well.
 
 An enhancer is a function that allows you to add functionality to Redux that it doesn't come with out of the box. We'll see this when we want to hook it up to the developer tools or when we want add some the ability to do asynchronous tasks (e.g. make a server-side HTTP requests).
 
@@ -22,7 +26,7 @@ Enhancers are—amazing—both simple, but also kind of hard to explain.
 
 An enhancer is a function that gets a copy of `createStore` and then a copy of all of the arguments passed to `createStore` before _actually_ passing them to `createStore`. This allows you to create libraries and plugins that will augment how the store works.
 
-We'll see this when we use the Redux Developer Tools and when we want to dispatch asynchronous actions. It's not super common that you'll write your own enhancers, but you'll use them from time to time.
+We'll see this when we use the Redux Developer Tools and when we want to dispatch asynchronous actions. It's _not_ super common that you'll write your own enhancers, but you'll use them from time to time.
 
 ```js
 const logEnhancer = (createStore) => (reducer, initialState, enhancer) => {

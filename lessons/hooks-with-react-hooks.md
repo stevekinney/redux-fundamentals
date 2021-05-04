@@ -8,9 +8,9 @@ description: "Getting started and an introduction to TypeScript && React Worksho
 
 So, we'll look at [this sandbox](https://codesandbox.io/s/uo1rb).
 
-We're starting from base principles, so we're going to have to do this from the ground up. So, where to begin?
+We're starting from base principles. So, we're going to have to do this from the ground up. Where to begin?
 
-Well, an interesting thing to think about is the basic state and the actions that can occur.
+Well, an interesting thing to think about is the basic state and the actions that can occur in a given feature—or, an entire application in this case.
 
 We have…
 
@@ -25,7 +25,9 @@ If we're being intellectually honest, we could handle this in a bunch of ways.
 - We could make a super generalized called `SET` where we set it a given number every time.
 - We could split the difference and have `INCREMENT` and `DECREMENT` and the have an action type that handles the edge cases.
 
-I like the third option. So, what would that look like?
+**A general rule**: Your actions should say what happened and not really have any opinions about what that means. Let your reducers figure that all out on your behalf.
+
+I like the first option. So, what would that look like?
 
 We can make a file called `actions.js`.
 
@@ -56,9 +58,11 @@ export const reducer = (state = initialState, action) => {
   }
 
   if (action.type === SET) {
-    return { count: action.payload };
+    return { count: parseInt(action.payload, 10) };
   }
 
   return state;
 };
 ```
+
+This looks pretty similiar to what we had previously without React, which makes sense.

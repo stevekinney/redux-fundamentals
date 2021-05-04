@@ -1,6 +1,6 @@
 ---
 path: "/connect"
-title: "Using the connect() API"
+title: "Using the Connect API"
 order: "4A"
 section: "Connecting Redux to React"
 description: "Getting started and an introduction to TypeScript && React Workshop"

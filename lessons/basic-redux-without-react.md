@@ -1,6 +1,6 @@
 ---
 path: "/welcome"
-title: "Redux Without React"
+title: "Redux's API"
 order: "2A"
 section: "Redux Without React"
 description: "Getting Comfortable With Redux By Itself"
@@ -14,18 +14,17 @@ Let's start by getting a sense of the lay of the land. Redux, for all of its pow
 - `compose`
 - `createStore`
 
-We'll discuss each of this in due time. We'll start with one of the simple utility methods that come along with Redux.
+Yup, just five functions. We'll discuss each of this in due time. We'll start with one of the simple utility methods that come along with Redux.
 
 ## `compose`
 
-Yup, just five functions. But, if we want to split hairs. It's actually less than that. `compose()` isn't exactly Redux-specific. It's just a helper function. `compose` takes a series of functions as arguments and returns a new function that applies those functions from left-to-right (or, from last-to-first if you're like me and have trouble discerning right from left).
+If we want to split hairs. It's actually less than that. `compose()` isn't exactly Redux-specific. It's just a helper function. `compose` takes a series of functions as arguments and returns a new function that applies each those functions from right-to-left (or, from last-to-first if you're like me and have trouble discerning right from left).
 
 Let's say that we had a bunch of functions that each take a string and return a modified string.
 
 ```js
 const makeLouder = (string) => string.toUpperCase();
 const repeatThreeTimes = (string) => string.repeat(3);
-
 const embolden = (string) => string.bold();
 ```
 

@@ -1,5 +1,5 @@
 ---
-path: "/dispatch"
+path: "/stores-and-dispatch"
 title: "Redux Stores and Dispatch"
 order: "2C"
 section: "Redux Without React"
