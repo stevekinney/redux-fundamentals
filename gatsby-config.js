@@ -6,7 +6,7 @@ module.exports = {
       'The companion website for Steve\'s "Redux Fundamentals" workshop for Frontend Masters',
     keywords: ["react", "typescript", "frontend masters"],
   },
-  pathPrefix: "/react-and-typescript", // if you're using GitHub Pages, put the name of the repo here with a leading slash
+  pathPrefix: "/redux-fundamentals", // if you're using GitHub Pages, put the name of the repo here with a leading slash
   plugins: [
     `gatsby-plugin-layout`,
     {
