@@ -23,7 +23,7 @@ path,title,order,section,description
 "/removing-an-item","Removing an Item","4E","Connecting Redux to React","Getting started and an introduction to TypeScript && React Workshop"
 "/updating-price-and-quantity","Updating Price and Quantity","4F","Connecting Redux to React","Getting started and an introduction to TypeScript && React Workshop"
 "/deriving-data","Deriving Data","4G","Connecting Redux to React","Getting started and an introduction to TypeScript && React Workshop"
-"/reselect","Computing Data with Reselect","5A","Selectors, Reselect, and a Component's Own Properties","Getting started and an introduction to TypeScript && React Workshop"
+"/reselect","Computing Data with Reselect","5A","Selectors and Reselect","Getting started and an introduction to TypeScript && React Workshop"
 "/reselect-exercise","Using Props with Reselect","5B","Selectors and Reselect","Getting started and an introduction to TypeScript && React Workshop"
 "/immer","Mutable Immutable State with Immer","6A","Immer","Getting started and an introduction to TypeScript && React Workshop"
 "/immer","Using Immer with an Entire Reducer","6B","Immer","Getting started and an introduction to TypeScript && React Workshop"
