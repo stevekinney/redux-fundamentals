@@ -1,7 +1,7 @@
 path,title,order,section,description
 "/welcome","Welcome and Introduction","1A","Introduction","Getting started with the Introduction to Redux workshop"
 "/repositories","Repositories Used In This Course","1B","Introduction","Here is everything you need to get going from a code perspective"
-"/welcome","Redux's API","2A","Redux Without React","Get comfortable with Redux by itself"
+"/redux-api","Redux's API","2A","Redux Without React","Get comfortable with Redux by itself"
 "/create-store","Redux Stores and Reducers","2B","Redux Without React","Creating Stores and Reducers"
 "/stores-and-dispatch","Redux Stores and Dispatch","2C","Redux Without React","Dispatching to the Store"
 "/subscribing-to-the-store","Subscring to Store Changes","2D","Redux Without React","Creating Stores and Reducers"
