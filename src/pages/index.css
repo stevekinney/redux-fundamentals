@@ -10,7 +10,8 @@ body {
   margin-top: 20px;
 }
 
-.index .jumbotron {
+.jumbotron {
+  border-radius: 0;
 }
 
 .example-table {

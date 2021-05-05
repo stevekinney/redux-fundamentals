@@ -1,5 +1,5 @@
 ---
-path: "/immer"
+path: "/immer-entire-reducer"
 title: "Using Immer with an Entire Reducer"
 order: "6B"
 section: "Immer"
