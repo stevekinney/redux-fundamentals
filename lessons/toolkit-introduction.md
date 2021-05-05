@@ -15,3 +15,10 @@ You can generate a React application using the Redux Toolkit template by doing t
 > npx create-react-app cra-redux-counter --template=redux
 
 Let's take a tour of this application and see what we can learn just from looking at the code.
+
+<iframe src="https://codesandbox.io/embed/cra-redux-counter-ohz69?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="cra-redux-counter"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
