@@ -29,23 +29,35 @@ An enhancer is a function that gets a copy of `createStore` and then a copy of a
 We'll see this when we use the Redux Developer Tools and when we want to dispatch asynchronous actions. It's _not_ super common that you'll write your own enhancers, but you'll use them from time to time.
 
 ```js
-const logEnhancer = (createStore) => (reducer, initialState, enhancer) => {
-  // Do stuff like wrap the reducer in a higher-order function.
-  const reducerWithConsoleLogs = (previousState, action) => {
-    const nextState = reducer(previousState, action);
-    console.log({ action, previousState, nextState });
-    return nextState;
+const monitorReducerEnhancer = (createStore) => (
+  reducer,
+  initialState,
+  enhancer
+) => {
+  const monitoredReducer = (state, action) => {
+    const start = performance.now();
+    const newState = reducer(state, action);
+    const end = performance.now();
+    const diff = round(end - start);
+
+    console.log("Reducer process time:", diff);
+
+    return newState;
   };
 
-  return createStore(reducerWithConsoleLogs, initialState, enhancer);
+  return createStore(monitoredReducer, initialState, enhancer);
 };
 ```
 
 Now, when you create your store, you can do modify whatever reducer is passed in.
 
 ```js
-const store = createStore(reducer, logEnhancer);
+const store = createStore(reducer, monitorReducerEnhancer);
 ```
+
+## Mini-Exercise: Write a Log Enhancer
+
+Can you write an enhancer that `console.logs` the action and the state before and after calling the reducer? [Solution](https://gist.github.com/stevekinney/f0009452e07db459e093086b0a8e03c2).
 
 ## `applyMiddleware`
 
@@ -95,3 +107,7 @@ const enhancer = compose(middleware, logEnhancer);
 It's kind of ridiculous, but it works.
 
 And with that, we covered all of Redux's API, but you probably want to see how it works with React, right?
+
+## Mini-Exercise: Implementing Monitoring as Middleware
+
+Can you re-implement that monitor enhancer as middleware? ([Solution](https://gist.github.com/stevekinney/f0009452e07db459e093086b0a8e03c2)).

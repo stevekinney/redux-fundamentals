@@ -12,8 +12,6 @@ In this section, we'll create an example using a template for Create React App. 
 
 You can generate a React application using the Redux Toolkit template by doing the following in the command line:
 
-```sh
-npx create-react-app cra-redux-counter --template=redux
-```
+> npx create-react-app cra-redux-counter --template=redux
 
 Let's take a tour of this application and see what we can learn just from looking at the code.

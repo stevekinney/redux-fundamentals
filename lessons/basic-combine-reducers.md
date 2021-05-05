@@ -12,10 +12,13 @@ The state might look something like this.
 
 ```js
 const initialState = {
-  users: [{ name: "Steve" }, { name: "Wes" }],
+  users: [
+    { id: 1, name: "Steve" },
+    { id: 2, name: "Wes" },
+  ],
   tasks: [
-    { title: "File the TPS reports" },
-    { title: "Order more toner for the printer" },
+    { title: "File the TPS reports", assignedTo: 1 },
+    { title: "Order more toner for the printer", assignedTo: null },
   ],
 };
 ```

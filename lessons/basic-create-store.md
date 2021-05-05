@@ -6,7 +6,7 @@ section: "Redux Without React"
 description: "Creating Stores and Reducers"
 ---
 
-So, now for those of you keeping tract at home, we're now really talking about four functions. That's write, we've already covered about 80% of the API and we're just getting started.
+For those of you keeping track at home, we're now really talking about four functions. That's right, we've already covered about 80% of the API and we're just getting started.
 
 Covering `compose()` first was kind of cheating. It's not really super important to understanding Redux. But, we'll take our small wins when we can get them, right?
 

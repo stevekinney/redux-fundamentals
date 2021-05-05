@@ -3,7 +3,7 @@ path: "/welcome"
 title: "Redux's API"
 order: "2A"
 section: "Redux Without React"
-description: "Getting Comfortable With Redux By Itself"
+description: "Get comfortable with Redux by itself"
 ---
 
 Let's start by getting a sense of the lay of the land. Redux, for all of its power, has a relatively small API footprint.
@@ -55,4 +55,4 @@ const makeLouderAndBoldAndRepeatThreeTimes = redux.compose(
 
 You'll see a similiar utility in other libraries like [Lodash](https://lodash.com/docs/4.17.15#flow) and [Ramda](https://ramdajs.com/docs/#compose).
 
-This is used as a helper when creating enhancers, which we'll talk about in the production-grade Redux workshop. For now, I'm just fulfilling my promises of demystifying the core API.
+This is used as a helper when creating enhancers, which we'll talk about in the a more advanced workshop. For now, I'm just fulfilling my promises of demystifying the core API.
