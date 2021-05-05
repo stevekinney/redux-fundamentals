@@ -27,7 +27,7 @@ path,title,order,section,description
 "/reselect","Computing Data with Reselect","5A","Selectors and Reselect","Getting started and an introduction to TypeScript && React Workshop"
 "/reselect-exercise","Using Props with Reselect","5B","Selectors and Reselect","Getting started and an introduction to TypeScript && React Workshop"
 "/immer","Mutable Immutable State with Immer","6A","Immer","Getting started and an introduction to TypeScript && React Workshop"
-"/immer","Using Immer with an Entire Reducer","6B","Immer","Getting started and an introduction to TypeScript && React Workshop"
+"/immer-entire-reducer","Using Immer with an Entire Reducer","6B","Immer","Getting started and an introduction to TypeScript && React Workshop"
 "/redux-toolkit","Introduction to Redux Toolkit","7A","Redux Toolkit","Getting started and an introduction to TypeScript && React Workshop"
 "/creating-a-slice","Creating a Slice of State","7B","Redux Toolkit","Getting started and an introduction to TypeScript && React Workshop"
 "/creating-a-slice-exercise","Human Slice (Exercise)","7C","Redux Toolkit","Getting started and an introduction to TypeScript && React Workshop"
