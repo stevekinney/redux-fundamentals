@@ -6,7 +6,7 @@ order,title,link0,link1,link2,link3,link4,link5,link6,link7,link8,link9,link10,l
 2D,Subscring to Store Changes,,,,,,,,,,,,,,,,,,
 2E,Bind Action Creators,,,,,,,,,,,,,,,,,,
 2F,Combine Reducers,,,,,,,,,,,,,,,,,,
-2G,Middleware and Enhancers,,,,,,,,,,,,,,,,,,
+2G,Middleware and Enhancers,https://gist.github.com/stevekinney/f0009452e07db459e093086b0a8e03c2,https://gist.github.com/stevekinney/f0009452e07db459e093086b0a8e03c2,,,,,,,,,,,,,,,,
 3A,Implementing the Basic Logic,https://codesandbox.io/s/uo1rb,,,,,,,,,,,,,,,,,
 3B,Introductiton to React Redux,https://reactjs.org/docs/context.html,,,,,,,,,,,,,,,,,
 3C,Adding the Redux Dev Tools,https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd,https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools/,,,,,,,,,,,,,,,,
