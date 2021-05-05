@@ -12,9 +12,7 @@ This is for anyone who is tired of copy and pasting snippets of Redux code from 
 
 ## Code Examples and Project Starters
 
-Clone [this repository][projects] and run `npx recursive-install` to install all of the dependencies.
-
-[projects]: https://github.com/stevekinney/react-and-typescript-projects
+You can find the repositories that we'll be working with [here](/repositories).
 
 ## Your Set Up
 
