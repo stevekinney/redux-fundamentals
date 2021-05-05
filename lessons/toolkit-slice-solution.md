@@ -33,10 +33,12 @@ Now, we can add that to our store.
 
 ```js
 import { configureStore } from "@reduxjs/toolkit";
-import { humansSlice } from "./HumansSlice";
+import { humansSlice } from "./humansSlice";
+import { tasksSlice } from "./tasksSlice";
 
 export const store = configureStore({
   reducer: {
+    tasks: tasksSlice.reducer,
     humans: humansSlice.reducer,
   },
 });

@@ -14,4 +14,4 @@ Humans should have:
 - A name as a string
 - An empty array of `taskIds`
 
-**Tasting note**: The UI will dispatch the action's payload as a string that out to be used as the name.
+**Tasting note**: The UI will dispatch the action's payload as a string that ought to be used as the name—just like with the `tasksSlice`.
