@@ -8,7 +8,7 @@ description: "Getting started with the Introduction to Redux workshop"
 
 ## Who Is This For?
 
-(Forthcoming…)
+This is for anyone who is tired of copy and pasting snippets of Redux code from other parts of the codebase or from articles on the Internet and wants to understand Redux at a core level. We'll start by looking at Redux itself—completely agnostic of any library—and then we'll look at multiple different techniques for incorporating it into React applications. Finally, we'll look at some sophisticated abstractions that will make it easier to efficiently incorporate Redux into your application.
 
 ## Code Examples and Project Starters
 
@@ -24,7 +24,7 @@ You don't need a lot to get rocking and/or rolling with this course. In fact, mo
 
 But, let's assume that you also want to work on some of this stuff locally as well. In that case, you're going to want to have the following installed:
 
-- [NodeJS][]. This course was tested using the latest LTS release of Node at the time (e.g. 14), but it honestly shouldn't matter much. I recommend using [nvm][] to manage which version of Node you're using.
+- [NodeJS][]. This course was tested using the latest LTS release of Node at the time (e.g. 15), but it honestly shouldn't matter much. I recommend using [nvm][] to manage which version of Node you're using.
 - You're going to need an editor of some kind. I recommend using [Visual Studio Code][vscode]. But, you likely already have opinions on this topic.
 
 ## My Set Up
