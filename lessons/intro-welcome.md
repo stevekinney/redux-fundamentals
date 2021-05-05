@@ -14,6 +14,8 @@ This is for anyone who is tired of copy and pasting snippets of Redux code from 
 
 You can find the repositories that we'll be working with [here](/repositories).
 
+The [slides can be found here](https://speakerdeck.com/stevekinney/redux-workshop-2021-05-05).
+
 ## Your Set Up
 
 You don't need a lot to get rocking and/or rolling with this course. In fact, most of the examples and exercises have versions that are hosted on [CodeSandbox][]. So, you probably only need a browsers and if you're reading this, you likely already have one of those.

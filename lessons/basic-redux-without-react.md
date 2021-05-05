@@ -1,5 +1,5 @@
 ---
-path: "/welcome"
+path: "/redux-api"
 title: "Redux's API"
 order: "2A"
 section: "Redux Without React"
