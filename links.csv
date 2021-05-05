@@ -1,5 +1,6 @@
 order,title,link0,link1,link2,link3,link4,link5,link6,link7,link8,link9,link10,link11,link12,link13,link14,link15,link16
 1A,Welcome and Introduction,https://codesandbox.io,https://nodejs.org,https://github.com/nvm-sh/nvm,https://code.visualstudio.com/,https://github.com/tonsky/FiraCode,https://fonts.google.com/specimen/Fira+Mono,https://marketplace.visualstudio.com/items?itemName=ms-vscode.Theme-TomorrowKit,https://marketplace.visualstudio.com/items?itemName=steoates.autoimport,https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode,https://stevekinney.net,https://twilio.com,https://turing.io,https://dinosaurjs.org,https://bit.ly/electronjs,https://twitter.com/stevekinney,https://github.com/stevekinney,https://instagram.com/stevekinney
+1B,Repositories Used In This Course,https://github.com/stevekinney/redux-incident-counter,https://github.com/stevekinney/tip-calculator,https://github.com/stevekinney/chores-redux,https://github.com/stevekinney/starwars-redux,https://github.com/stevekinney/taskmaster-redux,https://github.com/stevekinney/jetsetter-redux,,,,,,,,,,,
 2A,Redux's API,https://lodash.com/docs/4.17.15#flow,https://ramdajs.com/docs/#compose,,,,,,,,,,,,,,,
 2B,Redux Stores and Reducers,,,,,,,,,,,,,,,,,
 2C,Redux Stores and Dispatch,,,,,,,,,,,,,,,,,
